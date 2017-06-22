@@ -1,0 +1,18 @@
+<ion-header>
+ <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Program Studi</ion-title>
+  </ion-navbar>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list color="light">
+	<button ion-item *ngFor="let item of items" (click)="viewItem(item)">
+      <img src="{{ item.foto }}" width="17%"> {{ item.jurusan }}
+    </button>
+	</ion-list>
+</ion-content>

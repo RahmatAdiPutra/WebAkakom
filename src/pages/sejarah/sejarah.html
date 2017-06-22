@@ -1,0 +1,22 @@
+<ion-header>
+ <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sejarah</ion-title>
+  </ion-navbar>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let item of items" color="light">
+	<ion-card-content>
+		<ion-card-title>
+		<h2><b>{{ item.judul }}</b></h2>
+		</ion-card-title>
+		<p><img src="{{ item.foto }}"></p>
+		<p>{{ item.penjelasan }} </p>
+	</ion-card-content>
+	</ion-card>
+</ion-content>

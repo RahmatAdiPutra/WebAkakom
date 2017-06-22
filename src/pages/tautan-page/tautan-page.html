@@ -1,0 +1,17 @@
+<ion-header>
+ <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tautan</ion-title>
+  </ion-navbar>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let item of items">
+      <ion-icon ios="ios-bookmark" md="md-bookmark" color="primary"></ion-icon>
+	<a href="{{ item.link }}" target="blank">{{ item.nama }}</a>
+  </ion-list>
+</ion-content>

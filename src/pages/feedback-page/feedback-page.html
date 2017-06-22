@@ -1,0 +1,27 @@
+<ion-header>
+ <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feedback</ion-title>
+  </ion-navbar>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+      <button class="add" ion-button item-right icon-right margin-bottom color="primary" (click)="addEntry()">
+            Tambah Feedback
+            <ion-icon name="add"></ion-icon>
+      </button>
+   </ion-item>
+
+
+   <ion-item *ngFor="let item of items">
+      <p>Nama      : {{ item.nama }}</p> 
+	  <p>Tanggal  : {{ item.tanggal }} </p>
+	  <p>Komentar : {{ item.komentar }}</p>
+   </ion-item>
+
+</ion-content>

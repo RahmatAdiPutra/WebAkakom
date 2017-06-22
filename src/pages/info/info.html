@@ -1,0 +1,23 @@
+<ion-header>
+ <ion-toolbar color="primary">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Informasi Kampus</ion-title>
+  </ion-navbar>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let item of items" color="light">
+		<ion-item color="light">
+				<h5><b>{{ item.judul }}</b></h5>
+				<p>{{ item.tanggal }}</p>
+				<p><img src="{{ item.foto }}"></p>
+		</ion-item>
+			<ion-card-content>
+				<p>{{ item.penjelasan }}</p>
+			</ion-card-content>
+	</ion-card>
+</ion-content>
